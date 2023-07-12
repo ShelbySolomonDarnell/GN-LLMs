@@ -1,0 +1,76 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} GN Q&A {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        
+        {% include 'includes/preloader.html' %}
+
+        <!-- Hero -->
+        <section class="section-header">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 text-center">
+                        <h1 class="display-2 mb-3">Being helpful is key</h1>
+                        <span class="font-weight-normal">
+                            {% if msg %}
+                                {{ msg | safe }}
+                            {% else %}
+                                I didn't get
+                            {% endif %}                                  
+                        </span>
+                    </div>
+                    <form method="post" action="" action="#">
+                        <!-- Form -->
+                        <div class="mb-9">
+                            <label for="lbl_gnqaTextArea">GN QA</label>
+                            <textarea class="form-control" 
+                                placeholder="All your query belong to us." 
+                                id="querygnqa" 
+                                name="querygnqa" 
+                                rows="2">
+                                {% if query %}
+                                    {{ query | safe }}
+                                {% else %}
+                                    All your query belong to us.
+                                {% endif %}                                  
+                            </textarea>
+                            <button type="submit" name="submitquery" class="btn btn-primary">Submit Query</button>
+                        </div>
+                        <!-- End of Form -->
+                    </form>
+                    <div class="d-grid">
+                        <div class="col-12 col-md-8 text-center">
+                            <span class="font-weight-normal">
+                                {% if answer %}
+                                    {{ answer | safe }}
+                                {% else %}
+                                    I didn't get an answer.
+                                {% endif %}                                  
+                            </span>
+                        </div>
+                        <div class="accordion" id="accordionRefs">
+                            {% if answer_refs %}
+                                {{ answer_refs | safe }}
+                            {% else %}
+                                I didn't get any references
+                            {% endif %}                                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    {% include 'includes/footer.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

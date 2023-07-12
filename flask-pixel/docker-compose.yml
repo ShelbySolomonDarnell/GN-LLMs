@@ -1,0 +1,52 @@
+version: '3.8'
+services:
+  appseed_app:
+    container_name: appseed_app
+    image: appseed_app:latest
+    restart: always
+    env_file: .env
+    networks:
+      - db_network
+      - web_network
+    #volumes:
+    #  - .:/opt
+  nginx:
+    container_name: nginx
+    restart: always
+    image: "nginx:latest"
+    ports:
+      - "5085:5085"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - web_network
+    depends_on:
+      - appseed_app
+  gnqa_app:
+    container_name: gnqa_app
+    image: gnqa_app:latest
+    restart: always
+    env_file: .env
+    tty: true
+    networks:
+      - db_network
+      - web_network
+    volumes:
+      - .:/opt
+  nginxtwo:
+    container_name: nginxtwo
+    restart: always
+    image: "nginx:latest"
+    ports:
+      - "5086:5086"
+    volumes:
+      - ./nginx_two:/etc/nginx/conf.d
+    networks:
+      - web_network
+    depends_on:
+      - gnqa_app
+networks:
+  db_network:
+    driver: bridge
+  web_network:
+    driver: bridge

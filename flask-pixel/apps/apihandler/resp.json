@@ -1,0 +1,249 @@
+{
+    "created_at": "2023-07-11T16:11:16.746226Z",
+    "data": {
+        "amplify": false,
+        "answer": "There are 845 strains of rats, 573 of which are inbred, including substrains.",
+        "context": [
+            {
+                "document_id": "f7eb4341-2ac1-46c2-aa53-f10df79fbaa8",
+                "text": "Genetics\n174:2203–2213\nSeda O, Liska F, Sedová L, Kazdová L, Krenová\nD, Kren V (2005) A 14-gene region of rat\nchromosome 8 in SHR-derived polydactylous\ncongenic substrain affects muscle-specific insulin resistance, dyslipidaemia and visceral adiposity. Folia Biol (Praha) 51:53–61\nFournie GJ (2009) Generation of consomic\nand congenic rat strains (including speed congenics). Method Mol Biol current issue\nLanda V, Zidek V, Pravenec M (2009)\nGeneration of rat conplastic strains using superovulation. Method Mol Biol current issue\nJansen RC, Nap JP (2001) Genetical genomics: the added value from segregation."
+            },
+            {
+                "document_id": "f59ba250-917b-4f86-b840-6384c670488a",
+                "text": "In their hands, 1.9% of microinjected\nSprague Dawley eggs and 1.4% of F34 rat eggs\ndeveloped into transgenic founders. Thus, making\nSprague Dawley transgenic rats is actually more\nefficient than making transgenic C57BL/6J mice. This exciting observation is likely to yield more rat\ntransgenic projects in the future. Howard Jacob (Medical College of Wisconsin)\ndiscussed the Rat Genome Database disease portals,\na platform for genetic and genomic research. There\nare 845 strains of rats, 573 of which are inbred,\nincluding substrains."
+            },
+            {
+                "document_id": "f7eb4341-2ac1-46c2-aa53-f10df79fbaa8",
+                "text": "Sequencing of other strains, including the\nspontaneously hypertensive rat (SHR/Ola) is presently underway\nusing Illumina/Solexa paired-end sequencing techniques\n(Aitman, Hübner, Pravenec, Kurtz, et al. , unpublished results). Millions of SNPs between different rat strains are now available\nfor linkage analyses using new methods of efficient genotyping\nbased on genechip microarrays (10). In addition, over 800,000\nESTs and 5,000 annotated rat gene sequences are available for\nfunctional analyses of candidate genes. Development of new\nmethodologies for high throughput phenotyping, such as expression profiling, are becoming routinely used."
+            },
+            {
+                "document_id": "55a8d55f-a11f-4a60-86ca-c2ea62c4be45",
+                "text": "Abbott A: Return of the rat. Nature 2009, 460:788. 38. Gibbs RA, Weinstock GM, Metzker ML, et al. : Genome sequence\nof the Brown Norway rat yields insights into mammalian\nevolution. Nature 2004, 428:493–521. 39. Simonis M, de Bruijn E, Guryev V, et al. : Genomic and RNA\nanalysis of recombinant inbred panel founder strain [abstract]. Presented at the Rat Genomics & Models meeting. Cold Spring\nHarbor, NY, USA; December 2–5, 2009. 40. Landa V, Zidek V, Pravenec M: Generation of rat “supersonic”\ncongenic/conplastic strains using superovulation and embryo\ntransfer. Methods Mol Biol 2010, 597:267–275. 41."
+            },
+            {
+                "document_id": "cfdda570-52c3-4a7f-a36a-0b8f55913130",
+                "text": "18\n2.4 Genetic analysis\nBefore genotyping rat genome, only the genetic map could be relied on. Genetic\nmap does not give a precise position of the allele; it just shows the relative position based\non the distance to the other markers based on recombination frequency measured in cM,\nwith one centimorgan being equivalent to a crossover rate of 1%. After completion of the\nrat map, the new and more precise genetic map was created. This was done in La Jolla and\nin Prague by Jirout et al. (2004)."
+            },
+            {
+                "document_id": "90a19d89-daac-4de9-8213-d3047b1e4b65",
+                "text": "Shimoyama M, De Pons J, Hayman GT, Laulederkind SJ, Liu W, Nigam R, Petri V, Smith JR,\nTutaj M, Wang S-J, The Rat Genome Database 2015: genomic, phenotypic and environmental\nvariations and disease, Nucleic acids research 43(D1) (2014) D743–D750. [PubMed: 25355511]\n[24]. Dickinson ME, Flenniken AM, Ji X, Teboul L, Wong MD, White JK, Meehan TF, Weninger WJ,\nWesterberg H, Adissu H, High-throughput discovery of novel developmental phenotypes, Nature\n537(7621) (2016) 508. [PubMed: 27626380]\n[25]."
+            }
+        ],
+        "data_source": [
+            {
+                "document_id": "1024c1ee-1f36-4f06-9ae1-cd231b51d602",
+                "section_type": "main",
+                "text": "DNA preparation and genotyping\n\nGenomic DNA was extracted from rat tail tips according\nto methods previously described [27].  Polymorphic microsatellite markers were selected from the Rat Genome\nDatabase (http://rgd.mcw.edu) and the Ensembl database\n(www.ensembl.org).  The F2 intercross was genotyped\nwith 113 microsatellite markers evenly distributed\nacross the genome, with an average distance of 20 cM\nbased on previous knowledge of optimum spacing [28].\n The successful genotyping rate was 95.3 %.  Details of\nthe F2 genotyping have been described previously [22]."
+            },
+            {
+                "document_id": "90a19d89-daac-4de9-8213-d3047b1e4b65",
+                "section_type": "main",
+                "text": "Shimoyama M, De Pons J, Hayman GT, Laulederkind SJ, Liu W, Nigam R, Petri V, Smith JR,\nTutaj M, Wang S-J, The Rat Genome Database 2015: genomic, phenotypic and environmental\nvariations and disease, Nucleic acids research 43(D1) (2014) D743–D750.  [PubMed: 25355511]\n[24].  Dickinson ME, Flenniken AM, Ji X, Teboul L, Wong MD, White JK, Meehan TF, Weninger WJ,\nWesterberg H, Adissu H, High-throughput discovery of novel developmental phenotypes, Nature\n537(7621) (2016) 508.  [PubMed: 27626380]\n[25]."
+            },
+            {
+                "document_id": "55a8d55f-a11f-4a60-86ca-c2ea62c4be45",
+                "section_type": "main",
+                "text": "Abbott A: Return of the rat.  Nature 2009, 460:788.\n 38.  Gibbs RA, Weinstock GM, Metzker ML, et al. : Genome sequence\nof the Brown Norway rat yields insights into mammalian\nevolution.  Nature 2004, 428:493–521.\n 39.  Simonis M, de Bruijn E, Guryev V, et al. : Genomic and RNA\nanalysis of recombinant inbred panel founder strain [abstract].\n Presented at the Rat Genomics & Models meeting.  Cold Spring\nHarbor, NY, USA; December 2–5, 2009.\n 40.  Landa V, Zidek V, Pravenec M: Generation of rat “supersonic”\ncongenic/conplastic strains using superovulation and embryo\ntransfer.  Methods Mol Biol 2010, 597:267–275.\n 41."
+            },
+            {
+                "document_id": "d333b766-b7e4-4ab5-96a8-50a8a1d805f1",
+                "section_type": "main",
+                "text": "Numerous comparisons have been performed between two out-bred or inbred strains\nof rats or mice.  Comparing outbred strains is problematic because they are not isogenic; trait\n(phenotypic) differences might be due to genotype and might also be due to chance selection\nof individuals in the sample.  Two-strain comparisons have serious limitations that should\ndissuade one from picking such a limited comparison to reveal genetic mechanisms."
+            },
+            {
+                "document_id": "ba1c6c7e-9355-413a-947c-0bae330b58ba",
+                "section_type": "main",
+                "text": "A total of 100 classical laboratory strains, 62 wild-derived strains, and 36\nwild mice were genotyped on MDA at the Jackson Laboratory and the University of North Carolina at Chapel Hill\nto characterize patterns of haplotype diversity in Mus\nmusculus (Yang et al.  2011; Didion et al.  2012).  Those\ngenotypes are now available for public browsing and\ndownload at http://cgd.jax.org/datasets/popgen/diversi\ntyarray/yang2011.shtml.  The MDA was also applied to\nincipient CC lines.  First, 474 mice from the third generation of the CC breeding scheme (denoted G2:F1, Fig."
+            },
+            {
+                "document_id": "f59ba250-917b-4f86-b840-6384c670488a",
+                "section_type": "main",
+                "text": "In their hands, 1.9% of microinjected\nSprague Dawley eggs and 1.4% of F34 rat eggs\ndeveloped into transgenic founders.  Thus, making\nSprague Dawley transgenic rats is actually more\nefficient than making transgenic C57BL/6J mice.\n This exciting observation is likely to yield more rat\ntransgenic projects in the future.\n Howard Jacob (Medical College of Wisconsin)\ndiscussed the Rat Genome Database disease portals,\na platform for genetic and genomic research.  There\nare 845 strains of rats, 573 of which are inbred,\nincluding substrains."
+            },
+            {
+                "document_id": "d2f9c5cf-835c-450a-bb42-a2454a99e058",
+                "section_type": "main",
+                "text": "Mouse, rat, and human are handy nouns, but these\nnouns cannot be reified into single types without serious risk of being wrong.  All rats are\nwhite and all mice are black is a valid conclusion if we consider Sprague-Dawley and\nC57BL/6J as representatives of their species.  We can profit from something somewhat\nanalogous to Heisenberg's Uncertainty Principle to remind us that \"types\" are fuzzy around\nthe edges, and that there may be as many exceptions as there are rules.  The reason to\nemphasize this point is that behavioral traits are variably variable within and between\nspecies."
+            },
+            {
+                "document_id": "3c69df9d-414a-420b-a513-ca3860662d57",
+                "section_type": "main",
+                "text": "Aitman TJ, Critser JK, Cuppen E, Dominiczak A, Fernandez-Suarez\nXM, Flint J, Gauguier D, Geurts AM, Gould M, Harris PC, Holmdahl\nR, Hubner N, Izsvak Z, Jacob HJ, Kuramoto T, Kwitek AE, Marrone\nA, Mashimo T, Moreno C, Mullins J, Mullins L, Olsson T, Pravenec\nM, Riley L, Saar K, Serikawa T, Shull JD, Szpirer C, Twigger SN,\nVoigt B, Worley K. Progress and prospects in rat genetics: a community\nview.  Nat Genet 40: 516 –522, 2008.\n 2."
+            },
+            {
+                "document_id": "f59ba250-917b-4f86-b840-6384c670488a",
+                "section_type": "main",
+                "text": "Historically, biologists using\nthe rat as a model have been disease focused,\nstudying diseases, related phenotypes, pathways, and\nbiological processes.  The Rat Genome Database\nserves as a repository of all rat QTLs related to the\ndisease area as well as associated mouse and human\nQTLs, strains used as disease models, phenotype\ndata, related references, expression data, genomewide views of disease genes, and QLS via GViewer,\ncomparative maps of disease-related regions, customization of data sets and download options, and\nanalysis and visualization of function and cellular\nlocalization makeup of gene sets (http://\nwww.rgd.mcw.edu/).\n ENU mutagenesis is now being done with rats."
+            },
+            {
+                "document_id": "b69858f3-885e-4f80-9e59-7c713c18aa10",
+                "section_type": "main",
+                "text": "Because this\nwas an exploratory effort we used only a subset of the strains\nexamined in other parts of this study: 129X1/SvJ; C57BL/10J;\nC57L/J; C58/J; LG/J; NON/LtJ; NZB/BlNJ; RIIIS/J; NZW/\nLacJ; SJL/J; ST/bJ; BUB/BnJ; A/J; AKR/J; CBA/J; CE/J;\nDBA/1J; LP/J.  A total of 9 previously reported SNPs were\ngenotyped in this manner (rs33799594, rs33797803, rs33796825,\nrs33804194, rs33801611, rs33800133, rs33800131, rs33798567\nand rs33797503).  In addition, we performed sequencing across the\nduplication boundary and at the two ends of the duplication in an\neffort to obtain sequence from amplicons that would be unique in\nmice that had the duplication."
+            },
+            {
+                "document_id": "b078162f-a48d-405b-b2cf-3559fc3338c8",
+                "section_type": "main",
+                "text": "Many reports, however, of “mutant mice without a phenotype” still exist\n(Crusio 2002).  Apart from the trouble of thinking the literal meaning of such\nstatement, it is well known that very often abnormalities in physiological or\nbiochemical parameters are missed in the first line phenotyping of mice.\n For behavioural studies, the long preferred species was rat, mainly because\nthey are easier to handle and they perform complex tasks more readily than mice.\n Furthermore, the surgical interventions and use of live animals with implanted\ncannulaes and electrodes are more feasible in rats."
+            },
+            {
+                "document_id": "8d7f6840-3de0-4e1f-952b-65443f15c58f",
+                "section_type": "main",
+                "text":"Rat Genome Sequencing and Mapping Consortium, Baud A,\nHermsen R, Guryev V, Stridh P, Graham D, McBride MW,\n\nForoud T, Calderari S et al. : Combined sequence-based and\ngenetic mapping analysis of complex traits in outbred rats.  Nat\nGenet 2013, 45:767-775.\n 17.  Maroteaux G, Loos M, van der Sluis S, Koopmans B, Aarts E, van\nGassen K, Geurts A, Neuro BMPC, Largaespada DA, Spruijt BM\net al. : High-throughput phenotyping of avoidance learning in\nmice discriminates different genotypes and identifies a novel\ngene.  Genes Brain Behav 2012, 11:772-784.\nwww.sciencedirect.com\n\n25."
+            },
+            {
+                "document_id": "49231283-041c-4cc7-b0f2-edf76c580c38",
+                "section_type": "main",
+                "text": "Our study exemplifies the power of rodent genetic reference\n\n618\n\npopulations not only to identify associations between phenotypes that are difficult or even\n\n619\n\nimpossible to assess in humans, but also to give insights into the cell biology behind these\n\n620\n\nassociations.  Our experiments showed that manipulating the abundance of a single\n\n621\n\ncomponent of the protein folding machinery had relatively subtle yet significant effects on a\n\n622\n\nbroad range of phenotypes."
+            },
+            {
+                "document_id": "ba770059-1ec9-448f-85c5-cf604193c225",
+                "section_type": "main",
+                "text": "Our study exemplifies the power of rodent genetic reference\n\n618\n\npopulations not only to identify associations between phenotypes that are difficult or even\n\n619\n\nimpossible to assess in humans, but also to give insights into the cell biology behind these\n\n620\n\nassociations.  Our experiments showed that manipulating the abundance of a single\n\n621\n\ncomponent of the protein folding machinery had relatively subtle yet significant effects on a\n\n622\n\nbroad range of phenotypes."
+            },
+            {
+                "document_id": "f7eb4341-2ac1-46c2-aa53-f10df79fbaa8",
+                "section_type": "main",
+                "text": "Genetics\n174:2203–2213\nSeda O, Liska F, Sedová L, Kazdová L, Krenová\nD, Kren V (2005) A 14-gene region of rat\nchromosome 8 in SHR-derived polydactylous\ncongenic substrain affects muscle-specific insulin resistance, dyslipidaemia and visceral adiposity.  Folia Biol (Praha) 51:53–61\nFournie GJ (2009) Generation of consomic\nand congenic rat strains (including speed congenics).  Method Mol Biol current issue\nLanda V, Zidek V, Pravenec M (2009)\nGeneration of rat conplastic strains using superovulation.  Method Mol Biol current issue\nJansen RC, Nap JP (2001) Genetical genomics: the added value from segregation."
+            },
+            {
+                "document_id": "cfdda570-52c3-4a7f-a36a-0b8f55913130",
+                "section_type": "main",
+                "text": "18\n2.4 Genetic analysis\nBefore genotyping rat genome, only the genetic map could be relied on.  Genetic\nmap does not give a precise position of the allele; it just shows the relative position based\non the distance to the other markers based on recombination frequency measured in cM,\nwith one centimorgan being equivalent to a crossover rate of 1%.  After completion of the\nrat map, the new and more precise genetic map was created.  This was done in La Jolla and\nin Prague by Jirout et al.  (2004)."
+            },
+            {
+                "document_id": "f7eb4341-2ac1-46c2-aa53-f10df79fbaa8",
+                "section_type": "main",
+                "text": "Sequencing of other strains, including the\nspontaneously hypertensive rat (SHR/Ola) is presently underway\nusing Illumina/Solexa paired-end sequencing techniques\n(Aitman, Hübner, Pravenec, Kurtz, et al. , unpublished results).\n Millions of SNPs between different rat strains are now available\nfor linkage analyses using new methods of efficient genotyping\nbased on genechip microarrays (10).  In addition, over 800,000\nESTs and 5,000 annotated rat gene sequences are available for\nfunctional analyses of candidate genes.  Development of new\nmethodologies for high throughput phenotyping, such as expression profiling, are becoming routinely used."
+            },
+            {
+                "document_id": "966adb02-82f2-4ae1-88f5-db129eb164d5",
+                "section_type": "main",
+                "text": "Mice that carried\nthese two mutations were not included in the data set: BXD53,\nBXD55, BXD62, BXD66, BXD68, BXD74, BXD77, BXD81,\nBXD88, BXD89, BXD95, and BXD98."
+            },
+            {
+                "document_id": "dd878d66-c3af-4e2f-a6f8-9de6edc3dc60",
+                "section_type": "main",
+                "text": "Mice\nwere housed individually, and behavioral monitoring was performed\nfor three consecutive days.\n\n Single nucleotide polymorphism analysis\nA total of 15 single nucleotide polymorphisms (SNPs) were selected\nacross chromosome 1 using the Celera database based on the\npresence of allelic differences between the mouse strains A/J and\nC57BL/6J.  For the selected SNPs, Taqman Assay by Design was\nordered (Applied Biosystems, Foster City, CA, USA).  Genomic DNA\nwas isolated from spleen and tail from F1 hybrids, F2 intercross mice\nand A/J and C57BL/6J mice using a phenol/chloroform/isoamyl\nalcohol protocol (Laird et al.  1991)."
+            },
+            {
+                "document_id": "f33db3ab-2c0c-46ce-a323-4d274e0da6e5",
+                "section_type": "main",
+                "text": "Our study exemplifies the power of rodent genetic reference populations not\nonly to identify associations between phenotypes that are difficult or even impossible to assess\nin humans, but also to give insights into the cell biology behind these associations.  Our experiments showed that manipulating the abundance of a single component of the protein folding\nmachinery had relatively subtle yet significant effects on a broad range of phenotypes."
+            },
+            {
+                "document_id": "efc6d914-13a6-488d-9cd2-db9d25202833",
+                "section_type": "main",
+                "text": "Our study exemplifies the power of rodent genetic reference populations not\nonly to identify associations between phenotypes that are difficult or even impossible to assess\nin humans, but also to give insights into the cell biology behind these associations.  Our experiments showed that manipulating the abundance of a single component of the protein folding\nmachinery had relatively subtle yet significant effects on a broad range of phenotypes."
+            },
+            {
+                "document_id": "cabbee33-cf97-448d-ae70-23e11db43614",
+                "section_type": "main",
+                "text": "Our study exemplifies the power of rodent genetic reference populations not\nonly to identify associations between phenotypes that are difficult or even impossible to assess\nin humans, but also to give insights into the cell biology behind these associations.  Our experiments showed that manipulating the abundance of a single component of the protein folding\nmachinery had relatively subtle yet significant effects on a broad range of phenotypes."
+            },
+            {
+                "document_id": "1a08e48e-b18a-41c5-abc4-41c8c238bac5",
+                "section_type": "main",
+                "text": "Our study exemplifies the power of rodent genetic reference populations not\nonly to identify associations between phenotypes that are difficult or even impossible to assess\nin humans, but also to give insights into the cell biology behind these associations.  Our experiments showed that manipulating the abundance of a single component of the protein folding\nmachinery had relatively subtle yet significant effects on a broad range of phenotypes."
+            },
+            {
+                "document_id": "f45cb472-2b22-47bf-9dba-2468b0b23a28",
+                "section_type": "main",
+                "text": "Our study exemplifies the power of rodent genetic reference populations not\nonly to identify associations between phenotypes that are difficult or even impossible to assess\nin humans, but also to give insights into the cell biology behind these associations.  Our experiments showed that manipulating the abundance of a single component of the protein folding\nmachinery had relatively subtle yet significant effects on a broad range of phenotypes."
+            },
+            {
+                "document_id": "3711efc0-272d-4bac-b352-f77832cf624a",
+                "section_type": "main",
+                "text": "On the\nsubspecific origin of the laboratory mouse.  Nat Genet 39(9):110."
+            },
+            {
+                "document_id": "cf1f67cf-e0f9-4de9-82d4-100f910d0763",
+                "section_type": "main",
+                "text": "The genotyping strategies in step 4 are an essential part of the design of RCC experiments,\n\nand this is the step that has been greatly facilitated by the ease of generating high quality genomes\nand comprehensive lists of polymorphisms.  It is practical to do this for any pair of substrains of mice\nor rats.  It is even possible to do this for spontaneous mutations that arise within colonies of inbred\nstrains.  For example, Rosen and colleagues (2013) discovered a heritable neocortical heterotopia\n\nin one of two coisogenic lines of BXD29."
+            },
+            {
+                "document_id": "55a8d55f-a11f-4a60-86ca-c2ea62c4be45",
+                "section_type": "main",
+                "text": "Genotyping of\n43 rat inbred strains identified four haplotype groups\nrepresented by the BN, F344, LEW, and SHR mitochondrial genomes [43].  Additional conplastic strains with these\nhaplotypes of mitochondrial DNA, including SHR/Ola-mtF344\nand SHR/Ola-mtLEW, also exhibited dyslipidemia and decreased sensitivity of skeletal muscles to insulin action when\ncompared with SHR controls (Pravenec et al. , unpublished\nobservations)."
+            },
+            {
+                "document_id": "43407486-b9c2-487b-b19c-b605c4d201c6",
+                "section_type": "main",
+                "text": "Nonhuman cohorts, such as rodent populations, do not suffer from these restrictions\nand often contain more levels of data (Table 1).  The rodent cohort with the most extensive\ndata collection is currently the BXD family of strains derived from a cross between\nC57BL/6J (B) and DBA/2J (D) [11].  Inbred panels and RI strains represent stable\npopulations that allow for deep resampling of individual genotypes and the accumulation of\nmany different levels of data over time, and across laboratories and research communities\nenabling replication of research and the study of the pleiotropic actions of variants."
+            },
+            {
+                "document_id": "0e6c370f-b514-4551-b6ed-9cc72e6f6b75",
+                "section_type": "main",
+                "text": "Nonhuman cohorts, such as rodent populations, do not suffer from these restrictions\nand often contain more levels of data (Table 1).  The rodent cohort with the most extensive\ndata collection is currently the BXD family of strains derived from a cross between\nC57BL/6J (B) and DBA/2J (D) [11].  Inbred panels and RI strains represent stable\npopulations that allow for deep resampling of individual genotypes and the accumulation of\nmany different levels of data over time, and across laboratories and research communities\nenabling replication of research and the study of the pleiotropic actions of variants."
+            },
+            {
+                "document_id": "4439ac39-e421-482f-9aa9-9ad11fa641c1",
+                "section_type": "main",
+                "text": "2004) has raised the profile\nand pace of research into genetic analysis of rat traits\nand dramatically accelerated prospects for gene\nidentification.  Furthermore, Zimdahl et al.  (2004)\ngenerated a wealth of approximately 13,000 highquality candidate single nucleotide polymorphisms\n(SNPs) in transcribed sequences which provides a\npublic resource for investigating functional variation\nacross the rat genome.  The cloning of fertile adult\nrats (Zhou et al."
+            },
+            {
+                "document_id": "f459a8ed-b163-4ea0-a307-f186ec4350a5",
+                "section_type": "main",
+                "text": "The utility of rodents in genetic studies\nof complex disease has increased dramatically since the publication of the draft mouse genome in 2002 (Waterston et al. ,\n2002) and the rat genome in 2004 (Gibbs et al. , 2004).  Two\ngeneral strategies exist to investigate the genetics of behavioral phenotypes in rodents, and both have informed candidate\ngene studies in humans."
+            },
+            {
+                "document_id": "adc6d8db-4f67-4130-b5a2-3cc421d2af45",
+                "section_type": "main",
+                "text": "Mice\nwere 2–5 months of age at the time of evaluation.  All\nsamples were randomly composed by gender, and no\ngender effects were detected in any feature reported\nhere.\n The CxB RI series includes a total of 13 strains,\ntermed CxB1 to CxB13 (Table 1).  These lines were\ngenerated from C57BL/6ByJ and BALBc/ByJ, thus\nthe CxB series does not provide an exact genetic\nmatch to C57BL/6J and BALB/cJ mice used in our\noriginal experiments."
+            },
+            {
+                "document_id": "e6fc60c2-8651-44d7-a4aa-b4090e2d59f2",
+                "section_type": "main",
+                "text": "A total of 100 classical laboratory strains, 62 wild-derived\nstrains, and 36 wild mice were genotyped on MDA at the Jackson Laboratory and the\nUniversity of North Carolina at Chapel Hill to characterize patterns of haplotype diversity in\nMus musculus (Yang et al.  2011; Didion et al.  2012).  Those genotypes are now available for\npublic browsing and download at http://cgd.jax.org/datasets/popgen/diversityarray/\nyang2011.shtml.  The MDA was also applied to incipient CC lines.  First, 474 mice from the\nthird generation of the CC breeding scheme (denoted G2:F1, Fig.  1), the first generation at\n\nMamm Genome.  Author manuscript; available in PMC 2016 October 01."
+            },
+            {
+                "document_id": "8488ee18-ce6d-4a00-a97f-f4d2ec5d5175",
+                "section_type": "main",
+                "text": "Rats were of the 95th\ngeneration, aged 3 mo and housed 4/cage with food and\nwater ad libitum on a reversed 12 h light/dark cycle (lights on\nat 10 PM).\n The generation of Arrb2 knockout mice was described\npreviously (8).  Mutants were generated on a C57BL/6 background.  Genotyping of mice was performed using PCR from\ntail samples.  Mutants and wild-type littermates were housed\ntogether in standard Plexiglas cages, with food and water ad\nlibitum and on a 12 h light/dark cycle (lights on at 7 AM).\n Only males 2–3 mo of age were used in these experiments."
+            },
+            {
+                "document_id": "5e3ad5bb-135a-4980-b605-208101c3b315",
+                "section_type": "main",
+                "text": "Rats were of the 95th\ngeneration, aged 3 mo and housed 4/cage with food and\nwater ad libitum on a reversed 12 h light/dark cycle (lights on\nat 10 PM).\n The generation of Arrb2 knockout mice was described\npreviously (8).  Mutants were generated on a C57BL/6 background.  Genotyping of mice was performed using PCR from\ntail samples.  Mutants and wild-type littermates were housed\ntogether in standard Plexiglas cages, with food and water ad\nlibitum and on a 12 h light/dark cycle (lights on at 7 AM).\n Only males 2–3 mo of age were used in these experiments."
+            },
+            {
+                "document_id": "cabbee33-cf97-448d-ae70-23e11db43614",
+                "section_type": "main",
+                "text": "For the microarray analysis, one male and one female 10-week-old rat from\neach parental and HXB/BXH strains were used (total 64 rats).  Biochemical, metabolic and\nhemodynamic phenotypes were assessed in three-month-old non-fasted male SHR-Tti2+/- rats\nand their wild-type littermates (N = 8 per strain).\n\n Generation of Tti2 knockout SHR rats\nTti2 knockout rats were generated by microinjecting fertilized ova of SHR rats with the ZFN\n(Zinc Finger Nuclease) construct from Sigma-Aldrich."
+            },
+            {
+                "document_id": "1a08e48e-b18a-41c5-abc4-41c8c238bac5",
+                "section_type": "main",
+                "text": "For the microarray analysis, one male and one female 10-week-old rat from\neach parental and HXB/BXH strains were used (total 64 rats).  Biochemical, metabolic and\nhemodynamic phenotypes were assessed in three-month-old non-fasted male SHR-Tti2+/- rats\nand their wild-type littermates (N = 8 per strain).\n\n Generation of Tti2 knockout SHR rats\nTti2 knockout rats were generated by microinjecting fertilized ova of SHR rats with the ZFN\n(Zinc Finger Nuclease) construct from Sigma-Aldrich."
+            },
+            {
+                "document_id": "f33db3ab-2c0c-46ce-a323-4d274e0da6e5",
+                "section_type": "main",
+                "text": "For the microarray analysis, one male and one female 10-week-old rat from\neach parental and HXB/BXH strains were used (total 64 rats).  Biochemical, metabolic and\nhemodynamic phenotypes were assessed in three-month-old non-fasted male SHR-Tti2+/- rats\nand their wild-type littermates (N = 8 per strain).\n\n Generation of Tti2 knockout SHR rats\nTti2 knockout rats were generated by microinjecting fertilized ova of SHR rats with the ZFN\n(Zinc Finger Nuclease) construct from Sigma-Aldrich."
+            },
+            {
+                "document_id": "efc6d914-13a6-488d-9cd2-db9d25202833",
+                "section_type": "main",
+                "text": "For the microarray analysis, one male and one female 10-week-old rat from\neach parental and HXB/BXH strains were used (total 64 rats).  Biochemical, metabolic and\nhemodynamic phenotypes were assessed in three-month-old non-fasted male SHR-Tti2+/- rats\nand their wild-type littermates (N = 8 per strain).\n\n Generation of Tti2 knockout SHR rats\nTti2 knockout rats were generated by microinjecting fertilized ova of SHR rats with the ZFN\n(Zinc Finger Nuclease) construct from Sigma-Aldrich."
+            },
+            {
+                "document_id": "f45cb472-2b22-47bf-9dba-2468b0b23a28",
+                "section_type": "main",
+                "text": "For the microarray analysis, one male and one female 10-week-old rat from\neach parental and HXB/BXH strains were used (total 64 rats).  Biochemical, metabolic and\nhemodynamic phenotypes were assessed in three-month-old non-fasted male SHR-Tti2+/- rats\nand their wild-type littermates (N = 8 per strain).\n\n Generation of Tti2 knockout SHR rats\nTti2 knockout rats were generated by microinjecting fertilized ova of SHR rats with the ZFN\n(Zinc Finger Nuclease) construct from Sigma-Aldrich."
+            }
+        ],
+        "document_id": "104BCA1595B0239EE1243B4B0554C8FB",
+        "engine": "instruct",
+        "first_load": false,
+        "focus": "api",
+        "question": "List genotypes present in rats and not mice.",
+        "subquestions": null,
+        "task_id": "104BCA1595B0239EE1243B4B0554C8FB",
+        "usage": {
+            "curie": 5236,
+            "davinci": 1410
+        },
+        "user_id": 2
+    },
+    "document_id": "104BCA1595B0239EE1243B4B0554C8FB",
+    "task_id": "104BCA1595B0239EE1243B4B0554C8FB"
+}
