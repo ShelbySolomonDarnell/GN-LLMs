@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  matflask-app:
+    container_name: matflask_app
+    restart: always
+    env_file: .env
+    image: "matflask_app:latest"
+    networks:
+      - db_network
+      - web_network
+  matflask-nginx:
+    container_name: matflask_nginx
+    restart: always
+    image: "nginx:latest"
+    ports:
+      - "5095:5095"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - web_network
+    depends_on: 
+      - matflask-app
+networks:
+  db_network:
+    driver: bridge
+  web_network:
+    driver: bridge
+ 

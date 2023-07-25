@@ -1,0 +1,17 @@
+python-flask==2.1.1
+python-requests==2.28.1
+python-werkzeug==2.0.2
+python-jinja2==3.1.1
+python-flask-login=0.6.0
+python-flask-migrate==3.1.0
+python-wtforms==3.1.0
+python-flask-wtf==1.0.1
+python-flask-sqlalchemy==2.5.1
+python-sqlalchemy==1.4.42
+python-email-validator==1.0.2
+python-gunicorn==20.1.0
+python-flask-restx==0.5.1
+python-dotenv==0.20.0
+python-flask-minify==
+python-flask-mysqldb==
+
