@@ -36,14 +36,14 @@ def getAnswerUsingTaskID( extendUrl, my_auth ):
     return res
 
 def openAPIConfig():
-    f = open( "/apps/api.config.json" , "rb" )
+    f = open( "/home/shebes/Coding/2023/GN-LLMs/material-flask/apps/api.config.json" , "rb" )
     #f = open( "api.config.json" , "rb" )
     result = json.load(f)
     f.close()
     return result
 
 def openJsonResponse():
-    f = open( "/apps/resp.json" , "rb" )
+    f = open( "/home/shebes/Coding/2023/GN-LLMs/material-flask/apps/resp.json" , "rb" )
     #f = open( "resp.json" , "rb" )
     result = json.load(f)
     f.close()
