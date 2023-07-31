@@ -33,11 +33,6 @@ cd material-flask/
 ./run_guix-shell.sh
 ```
 
-Once inside of the guix shell run the following
-
-```sh
-./run_app.sh
-```
 The site should be up at localhost:5005
 
 ### Using Docker
