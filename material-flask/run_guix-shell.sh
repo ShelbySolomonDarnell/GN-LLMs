@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/usr/bin/env sh
 
 export ASSETS_ROOT="$HOME/GN-LLMs/material-flask/apps/static/assets/nos"
 
