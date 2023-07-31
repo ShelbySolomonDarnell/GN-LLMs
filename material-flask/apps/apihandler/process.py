@@ -3,9 +3,12 @@ import sys
 import time
 import string
 import json
+import os
+
 
 baseUrl           = 'https://genenetwork.fahamuai.com/api/tasks'
 answerUrl         = baseUrl + '/answers'
+basedir           = os.path.abspath(os.path.dirname(__file__))
 
 def getAuth(api_config):
     print('Bearer token -> ' + api_config['Bearer Token July 2023'])
@@ -36,15 +39,13 @@ def getAnswerUsingTaskID( extendUrl, my_auth ):
     return res
 
 def openAPIConfig():
-    f = open( "/home/shebes/Coding/2023/GN-LLMs/material-flask/apps/api.config.json" , "rb" )
-    #f = open( "api.config.json" , "rb" )
+    f = open(os.path.join(basedir, "api.config.json") , "rb" )
     result = json.load(f)
     f.close()
     return result
 
 def openJsonResponse():
-    f = open( "/home/shebes/Coding/2023/GN-LLMs/material-flask/apps/resp.json" , "rb" )
-    #f = open( "resp.json" , "rb" )
+    f = open(os.path.join(basedir, "resp.json") , "rb" )
     result = json.load(f)
     f.close()
     return result
