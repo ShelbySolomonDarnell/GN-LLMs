@@ -11,7 +11,7 @@
 
   {% include 'includes/navigation-transparent.html' %} 
 
-  <div class="page-header min-vh-35" style="background-image: url('/static/assets/img/gnqa-background.avif')">
+  <div class="page-header min-vh-35" style="background-image: {{ url_for('static', filename='assets/img/gnqa-background.avif') }}">
     <span class="mask bg-gradient-dark opacity-6"></span>
     <div class="container">
       <div class="row">
