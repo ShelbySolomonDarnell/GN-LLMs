@@ -40,7 +40,8 @@ def login():
         if user and verify_pass(password, user.password):
 
             login_user(user)
-            return redirect(url_for('authentication_blueprint.route_default'))
+            #return redirect(url_for('authentication_blueprint.route_default'))
+            return redirect(url_for('authentication_blueprint.gnqa'))
 
         # Something (user or pass) is not ok
         return render_template('accounts/login.html',
@@ -56,6 +57,10 @@ def login():
 
 @blueprint.route('/register', methods=['GET', 'POST'])
 def register():
+    return render_template('accounts/login.html',
+                           msg='Registration is disabled for this site.')
+
+'''
     create_account_form = CreateAccountForm(request.form)
     if 'register' in request.form:
 
@@ -94,6 +99,8 @@ def register():
     else:
         return render_template('accounts/register.html', form=create_account_form)
 
+'''
+
 @blueprint.route('/gnqa', methods=['POST', 'GET'])
 def gnqa():
     queryForm = QueryGNQA(request.form)
@@ -111,7 +118,7 @@ def gnqa():
 @blueprint.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('authentication_blueprint.login')) 
+    return redirect(url_for('authentication_blueprint.login'))
 
 # Errors
 
