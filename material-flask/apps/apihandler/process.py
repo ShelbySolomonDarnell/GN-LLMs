@@ -64,12 +64,6 @@ def negativeStatusMsg(res):
 def filterResponseText(val):
     return json.loads(''.join([str(char) for char in val if char in string.printable]))
 
-def AskClient(query):
-    return apiClient.ask( '?ask=' + query)
-
-def AnsClient(task_id):
-    return apiClient.getAnswer(task_id)
-
 def getGNQA(query):
     res, task_id = apiClient.ask('?ask=' + query)
     res, success = apiClient.getAnswer(task_id) 
@@ -115,6 +109,7 @@ def createAccordionFromJson(theContext):
         ndx += 1
     return result
 
+'''
 my_auth = getAuth(openAPIConfig())
 
 res, task_id = AskClient('Which is better, rats or mice?')
@@ -126,15 +121,5 @@ respText       = filterResponseText(res.text)
 answer         = respText['data']['answer']
 context        = respText['data']['context']
 print ("Context --> {1}\nAnswer --> {0}".format(answer, context))
-#the_answer = getAnswerWithTaskID(myobj, my_auth)
-#print(my_auth)
-#print(the_answer)
-
-#theQuestion = '?ask=How many rat and mouse species are present in GeneNetwork.org studies'
-#the_question = askTheDocuments(theQuestion, my_auth)
-#print('Task id is -> ' + the_question)
-
-#ans, context = getQA(theQuestion, my_auth)
-#print(ans)
-#print(context)
+'''
 
