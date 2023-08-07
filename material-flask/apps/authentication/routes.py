@@ -16,7 +16,7 @@ from apps.authentication.forms import LoginForm, CreateAccountForm, QueryGNQA
 from apps.authentication.models import Users
 from apps.authentication.util import verify_pass
 
-from apps.apihandler.process import (getGNQA)
+from apps.apihandler.process import getGNQA
 
 @blueprint.route('/')
 def route_default():

@@ -4,7 +4,7 @@ import time
 import string
 import json
 import os
-from client import Client
+from apps.apihandler.client import Client
 
 
 baseUrl           = 'https://genenetwork.fahamuai.com/api/tasks'
