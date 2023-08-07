@@ -10,7 +10,7 @@ import os
 import requests
 import time
 
-from errors import UnprocessableEntity
+from apps.apihandler.errors import UnprocessableEntity
 from requests import HTTPError
 from requests import Session
 from requests.adapters import HTTPAdapter
