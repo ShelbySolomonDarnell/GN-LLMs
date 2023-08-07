@@ -4,11 +4,14 @@ import time
 import string
 import json
 import os
+from client import Client
 
 
 baseUrl           = 'https://genenetwork.fahamuai.com/api/tasks'
 answerUrl         = baseUrl + '/answers'
 basedir           = os.path.abspath(os.path.dirname(__file__))
+
+apiClient = Client(requests.Session(), api_key='')
 
 def getAuth(api_config):
     print('Bearer token -> ' + api_config['Bearer Token July 2023'])
@@ -61,16 +64,28 @@ def negativeStatusMsg(res):
 def filterResponseText(val):
     return json.loads(''.join([str(char) for char in val if char in string.printable]))
 
+def AskClient(query):
+    return apiClient.ask( '?ask=' + query)
 
-def getGNQA(query, auth):
+def AnsClient(task_id):
+    return apiClient.getAnswer(task_id)
+
+def getGNQA(query):
+    res, task_id = apiClient.ask('?ask=' + query)
+    res, success = apiClient.getAnswer(task_id) 
+    '''
     res, queryGood = askTheDocuments('?ask=' + query, auth)
     if (queryGood==0):
         return res, '' 
-    respText       = filterResponseText(res.text)
-    answer         = respText['data']['answer']
-    context        = respText['data']['context']
-    accordionBody  = createAccordionFromJson(context)
-    return answer, accordionBody
+    '''
+    if ( success == 1 ):
+        respText       = filterResponseText(res.text)
+        answer         = respText['data']['answer']
+        context        = respText['data']['context']
+        accordionBody  = createAccordionFromJson(context)
+        return answer, accordionBody
+    else:
+        return res, "Unfortunately I have nothing."
 
 def createAccordionHead(doc_id, expanded, head_txt):
     if expanded == 0:
@@ -101,6 +116,16 @@ def createAccordionFromJson(theContext):
     return result
 
 my_auth = getAuth(openAPIConfig())
+
+res, task_id = AskClient('Which is better, rats or mice?')
+print (res)
+print ("Ask for the result behind the task id --> {0}".format(task_id))
+res, other = AnsClient(task_id)
+print (res)
+respText       = filterResponseText(res.text)
+answer         = respText['data']['answer']
+context        = respText['data']['context']
+print ("Context --> {1}\nAnswer --> {0}".format(answer, context))
 #the_answer = getAnswerWithTaskID(myobj, my_auth)
 #print(my_auth)
 #print(the_answer)

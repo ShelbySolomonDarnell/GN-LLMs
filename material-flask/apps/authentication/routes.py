@@ -16,7 +16,7 @@ from apps.authentication.forms import LoginForm, CreateAccountForm, QueryGNQA
 from apps.authentication.models import Users
 from apps.authentication.util import verify_pass
 
-from apps.apihandler.process import (my_auth, getGNQA)
+from apps.apihandler.process import (getGNQA)
 
 @blueprint.route('/')
 def route_default():
@@ -108,7 +108,7 @@ def gnqa():
         return render_template('home/gnqa.html')
     if request.method == 'POST':
         query = request.form['querygnqa']
-        answer, refs = getGNQA(query, my_auth)
+        answer, refs = getGNQA(query)
         return render_template('home/gnqa.html',
                 query=query, answer=answer,
                 accordion_refs=refs, form=queryForm)
