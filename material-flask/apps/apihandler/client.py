@@ -4,6 +4,7 @@ This module provides a Client object to interface with an API.
 
 """
 
+import datetime
 import json
 import logging
 import os
@@ -14,7 +15,7 @@ from apps.apihandler.errors import UnprocessableEntity
 from requests import HTTPError
 from requests import Session
 from requests.adapters import HTTPAdapter
-from requests.compat import urljoin
+#from requests.compat import urljoin
 from requests.packages.urllib3.util.retry import Retry # type: ignore
 
 basedir     = os.path.abspath(os.path.dirname(__file__))
@@ -100,18 +101,17 @@ class Client(Session):
 
     def custom_request(self, method, url, *args, **kwargs):
         max_retries = 5 
-        retry_delay = 1 
+        retry_delay = 2
 
-        if (method=='POST'):
-            response = self.post(url=url, headers=self.headers, *args, **kwargs)
-        elif (method=='PUT'):
-            response = self.put(url=url, headers=self.headers, *args, **kwargs)
-        else:
-            response = self.get(url=url, headers=self.headers, *args, **kwargs)
+        print ('[{0}] Request begin'.format(datetime.datetime.now()))
+        response = super().request(method, url, *args, **kwargs)
+        print ('[{0}] Response arrival'.format(datetime.datetime.now()))
+
+        i = 0
         for i in range(max_retries):
             try:
+                print ('Raising status for response {0} -- {1}'.format(i+1, datetime.datetime.now()))
                 response.raise_for_status()
-                return response
             except requests.exceptions.RequestException as exc:
                 code = exc.response.status_code
                 if code == 422:
@@ -119,8 +119,17 @@ class Client(Session):
                     #from exc
                 elif i == max_retries - 1:
                     raise
-                else:
-                    time.sleep(retry_delay)
+            if response.ok:
+                print('Status code for response is {0}'.format(response.status_code))
+                # Give time to get all the data
+                print ('[{0}] delay begin'.format(datetime.datetime.now()))
+                time.sleep(retry_delay*3)
+                print ('[{0}] delay   end'.format(datetime.datetime.now()))
+                return response
+            else: 
+                print ('[{1}] Retry {0}'.format(i+1, datetime.datetime.now()))
+                time.sleep(retry_delay)
+        return response
 
 class TimeoutHTTPAdapter(HTTPAdapter):
     def __init__(self, timeout, *args, **kwargs):
