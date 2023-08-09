@@ -20,16 +20,16 @@ from requests.packages.urllib3.util.retry import Retry # type: ignore
 
 basedir     = os.path.abspath(os.path.dirname(__file__))
 logger      = logging.getLogger(__name__)
- 
+
 '''
-/* 
+/*
  *Urls for asking questions of the documents, retrieving the
  * answers, and giving feedback as to the goodness of references.
  */'''
 class Client(Session):
     """GeneNetworkQA Client
 
-    Constructs a :obj:`requests.Session` for GeneNetworkQA API requests with 
+    Constructs a :obj:`requests.Session` for GeneNetworkQA API requests with
     authorization, base URL, request timeouts, and request retries.
 
     Args:
@@ -50,7 +50,7 @@ class Client(Session):
         """
         super().__init__()
         self.host = f"https://genenetwork.fahamuai.com/api/tasks"
-        self.headers.update(self.getAuth(self.openAPIConfig())) 
+        self.headers.update(self.getAuth(self.openAPIConfig()))
         self.baseUrl      = 'https://genenetwork.fahamuai.com/api/tasks'
         self.answerUrl    = self.baseUrl + '/answers'
         self.feedbackUrl  = self.baseUrl + '/feedback'
@@ -74,7 +74,7 @@ class Client(Session):
 
     def getAuth(self, api_config):
         return {"Authorization": "Bearer " + api_config['Bearer Token July 2023']}
-    
+
     def ask(self, exUrl, *args, **kwargs):
         askUrl = self.baseUrl + exUrl
         res    = self.custom_request('POST', askUrl, *args, **kwargs)
@@ -100,8 +100,8 @@ class Client(Session):
         return json.loads(res.text)
 
     def custom_request(self, method, url, *args, **kwargs):
-        max_retries = 5 
-        retry_delay = 2
+        max_retries = 5
+        retry_delay = 3
 
         print ('[{0}] Request begin'.format(datetime.datetime.now()))
         response = super().request(method, url, *args, **kwargs)
@@ -126,7 +126,7 @@ class Client(Session):
                 time.sleep(retry_delay*3)
                 print ('[{0}] delay   end'.format(datetime.datetime.now()))
                 return response
-            else: 
+            else:
                 print ('[{1}] Retry {0}'.format(i+1, datetime.datetime.now()))
                 time.sleep(retry_delay)
         return response
