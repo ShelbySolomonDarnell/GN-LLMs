@@ -14,8 +14,8 @@ basedir           = os.path.abspath(os.path.dirname(__file__))
 apiClient = Client(requests.Session(), api_key='')
 
 def getAuth(api_config):
-    print('Bearer token -> ' + api_config['Bearer Token July 2023'])
-    return {"Authorization": "Bearer " + api_config['Bearer Token July 2023']}
+    print('Bearer token -> ' + api_config['Bearer Token August 2023'])
+    return {"Authorization": "Bearer " + api_config['Bearer Token August 2023']}
 
 def askTheDocuments( extendUrl, my_auth ):
     try:
@@ -47,8 +47,14 @@ def openAPIConfig():
     f.close()
     return result
 
-def openJsonResponse():
-    f = open(os.path.join(basedir, "resp.json") , "rb" )
+def getJsonDocIDs():
+    f = open(os.path.join(basedir, "document_ids.json") , "rb" )
+    result = json.load(f)
+    f.close()
+    return result
+
+def getJsonRefs():
+    f = open(os.path.join(basedir, "gn_bib.json") , "rb" )
     result = json.load(f)
     f.close()
     return result
@@ -122,4 +128,7 @@ answer         = respText['data']['answer']
 context        = respText['data']['context']
 print ("Context --> {1}\nAnswer --> {0}".format(answer, context))
 '''
+
+print (getJsonDocIDs())
+print(getJsonRefs())
 
