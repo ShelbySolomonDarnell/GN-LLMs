@@ -128,9 +128,8 @@
 		"language": "en",
 		"urldate": "2023-02-06",
 		"JOURNAL": "Neuroinformatics",
-		"AUTHOR": "Yan, Lei and Williams, Robert W and Zhou Xiaodong and Lu, Lu and Centeno, Arthur and Kuan, Leonard and Hawrylycz, Michael and Rosen, Glenn D", 
-    "month": "Aug",
-    "year": 2010
+		"AUTHOR": "Yan, Lei and Williams, Robert W and Zhou Xiaodong and Lu, Lu and Centeno, Arthur and Kuan, Leonard and Hawrylycz, Michael and Rosen, Glenn D","month": "Aug",
+		"year": 2010
 	},
 	"mulligan_genetic2010": 
 	{
@@ -369,7 +368,7 @@
 		"urldate": "2023-01-19",
 		"journal": "Nature Communications", 
 		"AUTHOR": "Hager, Reinmar and Lu, Lu and Rosen, Glenn D. and Williams, Robert W.", 
-	        "month": "Jan",
+	    "month": "Jan",
 		"year": 2012,
 		"pages": "1079"
 	},
@@ -4557,7 +4556,7 @@
 		"month": "Dec",
 		"pages": "1--14"
 	},
-	"lariviere_genetics2010": 
+	"052e6a72-41b6-49d3-b37d-eb6664b0afe8": 
 	{
 		"filename": "2010-Lariviere-A systems genetics resource and analysis.pdf",
 		"TITLE": "The genetics of pain and analgesia in laboratory animals",

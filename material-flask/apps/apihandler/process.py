@@ -11,11 +11,34 @@ baseUrl           = 'https://genenetwork.fahamuai.com/api/tasks'
 answerUrl         = baseUrl + '/answers'
 basedir           = os.path.abspath(os.path.dirname(__file__))
 
-apiClient = Client(requests.Session(), api_key='')
+apiClient         = Client(requests.Session(), api_key='')
+
+class DocIDs():
+    def __init__(self):
+        f = open(os.path.join(basedir, "document_ids.json") , "rb" )
+        result = json.load(f)
+        f.close()
+        self.doc_ids = result
+
+    def getInfo(self, doc_id):
+        return self.doc_ids[doc_id]
+    
+the_doc_ids = DocIDs()
 
 def getAuth(api_config):
     print('Bearer token -> ' + api_config['Bearer Token August 2023'])
     return {"Authorization": "Bearer " + api_config['Bearer Token August 2023']}
+
+
+def formatBibliographyInfo(bibInfo):
+    if isinstance(bibInfo, str):
+        # remove '.txt'
+        bibInfo = bibInfo.removesuffix('.txt')
+    else:
+        # format string bibliography information
+        bibInfo = "{0}. ".format(bibInfo['author'], bibInfo['title'], bibInfo['year'], bibInfo['doi'])
+    return bibInfo
+
 
 def askTheDocuments( extendUrl, my_auth ):
     try:
@@ -47,17 +70,6 @@ def openAPIConfig():
     f.close()
     return result
 
-def getJsonDocIDs():
-    f = open(os.path.join(basedir, "document_ids.json") , "rb" )
-    result = json.load(f)
-    f.close()
-    return result
-
-def getJsonRefs():
-    f = open(os.path.join(basedir, "gn_bib.json") , "rb" )
-    result = json.load(f)
-    f.close()
-    return result
 
 def getTaskIDFromResult(res):
     task_id = json.loads(res.text)
@@ -95,6 +107,7 @@ def createAccordionHead(doc_id, expanded, head_txt):
     return '<h2 class="accordion-header" id="heading_{0}"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{0}" aria-expanded="{1}" aria-controls="collapse_{0}">{2}</button></h2>'.format(doc_id, expanded, head_txt)
 
 def createAccordionBody(parentName, doc_id, body_txt):
+    #docInfo = 
     return '<div id="collapse_{0}" class="accordion-collapse collapse" aria-labelledby="heading_{0}" data-bs-parent="#{1}"><div class="accordion-body">{2}</div></div>'.format(doc_id, parentName, body_txt)
 
 def createAccordionItem(parentName, doc_id, head_txt, body_txt, expand):
@@ -109,7 +122,13 @@ def createAccordionFromJson(theContext):
             expand = 1
         else: 
             expand = 0
-        docInfoStr = createAccordionItem('accordionRefs', docInfo['document_id'], 'Reference #{0} -- Document ID {1}'.format(ndx, docInfo['document_id']), docInfo['text'], expand)
+        bibInfo    = formatBibliographyInfo(the_doc_ids.getInfo(docInfo['document_id']))
+        docInfoStr = createAccordionItem('accordionRefs', 
+                                         docInfo['document_id'], 
+                                         #'Reference #{0} -- Document ID {1}'.format(ndx, docInfo['document_id']), 
+                                         'Reference #{0} -- {1}'.format(ndx, bibInfo), 
+                                         docInfo['text'], 
+                                         expand)
         result += docInfoStr
         print (docInfoStr)
         ndx += 1
@@ -127,8 +146,8 @@ respText       = filterResponseText(res.text)
 answer         = respText['data']['answer']
 context        = respText['data']['context']
 print ("Context --> {1}\nAnswer --> {0}".format(answer, context))
-'''
-
 print (getJsonDocIDs())
 print(getJsonRefs())
+'''
+
 

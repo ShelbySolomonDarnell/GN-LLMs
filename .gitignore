@@ -131,3 +131,4 @@ dmypy.json
 .pyre/
 material-flask/apps/apihandler/client.example.py
 out.txt
+material-flask/run_guix-shell2.sh
