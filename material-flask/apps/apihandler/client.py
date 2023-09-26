@@ -73,7 +73,7 @@ class Client(Session):
         return result
 
     def getAuth(self, api_config):
-        return {"Authorization": "Bearer " + api_config['Bearer Token August 2023']}
+        return {"Authorization": "Bearer " + api_config['Bearer Token September 2023']}
 
     def ask(self, exUrl, *args, **kwargs):
         askUrl = self.baseUrl + exUrl
@@ -123,7 +123,7 @@ class Client(Session):
                 print('Status code for response is {0}'.format(response.status_code))
                 # Give time to get all the data
                 print ('[{0}] delay begin'.format(datetime.datetime.now()))
-                time.sleep(retry_delay*3)
+                time.sleep(retry_delay*2.5)
                 print ('[{0}] delay   end'.format(datetime.datetime.now()))
                 return response
             else:

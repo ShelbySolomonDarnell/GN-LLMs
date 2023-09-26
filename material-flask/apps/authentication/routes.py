@@ -57,10 +57,6 @@ def login():
 
 @blueprint.route('/register', methods=['GET', 'POST'])
 def register():
-    return render_template('accounts/login.html',
-                           msg='Registration is disabled for this site.')
-
-'''
     create_account_form = CreateAccountForm(request.form)
     if 'register' in request.form:
 
@@ -98,7 +94,9 @@ def register():
 
     else:
         return render_template('accounts/register.html', form=create_account_form)
-
+'''
+    return render_template('accounts/login.html',
+                           msg='Registration is disabled for this site.')
 '''
 
 @blueprint.route('/gnqa', methods=['POST', 'GET'])

@@ -21,20 +21,23 @@ class DocIDs():
         self.doc_ids = result
 
     def getInfo(self, doc_id):
-        return self.doc_ids[doc_id]
-    
+        if doc_id in self.doc_ids.keys():
+            return self.doc_ids[doc_id]
+        else:
+            return doc_id
+
 the_doc_ids = DocIDs()
 
 def getAuth(api_config):
-    print('Bearer token -> ' + api_config['Bearer Token August 2023'])
-    return {"Authorization": "Bearer " + api_config['Bearer Token August 2023']}
+    print('Bearer token -> ' + api_config['Bearer Token September 2023'])
+    return {"Authorization": "Bearer " + api_config['Bearer Token September 2023']}
 
 
 def formatBibliographyInfo(bibInfo):
     if isinstance(bibInfo, str):
         # remove '.txt'
         bibInfo = bibInfo.removesuffix('.txt')
-    else:
+    elif isinstance(bibInfo, dict):
         # format string bibliography information
         bibInfo = "{0}. ".format(bibInfo['author'], bibInfo['title'], bibInfo['year'], bibInfo['doi'])
     return bibInfo
@@ -42,8 +45,8 @@ def formatBibliographyInfo(bibInfo):
 
 def askTheDocuments( extendUrl, my_auth ):
     try:
-        res     = requests.post(baseUrl+extendUrl, 
-                            data={}, 
+        res     = requests.post(baseUrl+extendUrl,
+                            data={},
                             headers=my_auth)
         res.raise_for_status()
     except:
@@ -84,11 +87,11 @@ def filterResponseText(val):
 
 def getGNQA(query):
     res, task_id = apiClient.ask('?ask=' + query)
-    res, success = apiClient.getAnswer(task_id) 
+    res, success = apiClient.getAnswer(task_id)
     '''
     res, queryGood = askTheDocuments('?ask=' + query, auth)
     if (queryGood==0):
-        return res, '' 
+        return res, ''
     '''
     if ( success == 1 ):
         respText       = filterResponseText(res.text)
@@ -107,7 +110,6 @@ def createAccordionHead(doc_id, expanded, head_txt):
     return '<h2 class="accordion-header" id="heading_{0}"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{0}" aria-expanded="{1}" aria-controls="collapse_{0}">{2}</button></h2>'.format(doc_id, expanded, head_txt)
 
 def createAccordionBody(parentName, doc_id, body_txt):
-    #docInfo = 
     return '<div id="collapse_{0}" class="accordion-collapse collapse" aria-labelledby="heading_{0}" data-bs-parent="#{1}"><div class="accordion-body">{2}</div></div>'.format(doc_id, parentName, body_txt)
 
 def createAccordionItem(parentName, doc_id, head_txt, body_txt, expand):
@@ -116,22 +118,37 @@ def createAccordionItem(parentName, doc_id, head_txt, body_txt, expand):
 def createAccordionFromJson(theContext):
     result = ''
     # loop thru json array
-    ndx = 1
-    for docInfo in theContext:
+    ndx = 0
+    for docID, summaryLst in theContext.items():
+        # item is a key with a list
+        comboTxt = ''
+        for entry in summaryLst:
+            comboTxt += '\t' + entry['text']
+        #print("\nRef -> {0}\n\tCombined text -> {1}\n".format(docID,comboTxt))
+
+    '''
+    for docID in theContext:
         if ndx == 1:
-            expand = 1
-        else: 
+            expand = 0 #1
+        else:
             expand = 0
-        bibInfo    = formatBibliographyInfo(the_doc_ids.getInfo(docInfo['document_id']))
-        docInfoStr = createAccordionItem('accordionRefs', 
-                                         docInfo['document_id'], 
-                                         #'Reference #{0} -- Document ID {1}'.format(ndx, docInfo['document_id']), 
-                                         'Reference #{0} -- {1}'.format(ndx, bibInfo), 
-                                         docInfo['text'], 
-                                         expand)
-        result += docInfoStr
-        print (docInfoStr)
-        ndx += 1
+        print("\nThe document identifier is -> {0}\n".format(json.dumps(docID,indent=2,sort_keys=False)))
+        #docTxt  = docID['text']
+        #docInfo = the_doc_ids.getInfo(docID['document_id'])
+        #if docID != docInfo:
+        #    bibInfo    = formatBibliographyInfo(docInfo)
+        #else:
+        #    bibInfo    = docID
+        #docInfoStr = createAccordionItem('accordionRefs', docID,
+        #            'Reference #{0} -- Document ID {1}'.format(ndx, docID),
+        #            'Reference #{0} -- {1}'.format(ndx, bibInfo),
+        #            docTxt,
+        #            expand)
+        #result += docInfoStr
+        #print("\nThe document informaton is -> {0}\n\tbibinfo is {1}\n".format(docInfo,bibInfo))
+        #print (docInfoStr)
+        #ndx += 1
+    '''
     return result
 
 '''
