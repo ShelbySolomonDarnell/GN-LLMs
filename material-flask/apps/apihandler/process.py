@@ -119,12 +119,28 @@ def createAccordionFromJson(theContext):
     result = ''
     # loop thru json array
     ndx = 0
+    expand = 1
     for docID, summaryLst in theContext.items():
+        if ndx > 0:
+            expand = 0 
         # item is a key with a list
         comboTxt = ''
         for entry in summaryLst:
             comboTxt += '\t' + entry['text']
-        #print("\nRef -> {0}\n\tCombined text -> {1}\n".format(docID,comboTxt))
+        print("\nRef -> {0}\n\tCombined text -> {1}\n".format(docID,comboTxt))
+
+        docInfo = the_doc_ids.getInfo(docID)
+        if docID != docInfo:
+            bibInfo    = formatBibliographyInfo(docInfo)
+        else:
+            bibInfo    = docID
+        docInfoStr = createAccordionItem('accordionRefs', docID,
+                    'Reference #{0} -- Document ID {1}'.format(ndx, bibInfo),
+                    '{0}'.format(comboTxt),
+                    expand)
+        result += docInfoStr
+        ndx += 1
+    return result
 
     '''
     for docID in theContext:
@@ -149,7 +165,6 @@ def createAccordionFromJson(theContext):
         #print (docInfoStr)
         #ndx += 1
     '''
-    return result
 
 '''
 my_auth = getAuth(openAPIConfig())

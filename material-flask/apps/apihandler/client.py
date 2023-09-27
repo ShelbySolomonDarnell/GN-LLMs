@@ -123,7 +123,7 @@ class Client(Session):
                 print('Status code for response is {0}'.format(response.status_code))
                 # Give time to get all the data
                 print ('[{0}] delay begin'.format(datetime.datetime.now()))
-                time.sleep(retry_delay*2.5)
+                time.sleep(retry_delay*3)
                 print ('[{0}] delay   end'.format(datetime.datetime.now()))
                 return response
             else:
