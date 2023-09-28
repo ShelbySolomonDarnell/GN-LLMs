@@ -135,7 +135,7 @@ def createAccordionFromJson(theContext):
         else:
             bibInfo    = docID
         docInfoStr = createAccordionItem('accordionRefs', docID,
-                    'Reference #{0} -- Document ID {1}'.format(ndx, bibInfo),
+                    'Reference #{0} -- {1}'.format(ndx, bibInfo),
                     '{0}'.format(comboTxt),
                     expand)
         result += docInfoStr
