@@ -5,6 +5,7 @@ import string
 import json
 import os
 from apps.apihandler.client import Client
+from apps.apihandler.response import DocIDs, the_doc_ids
 
 
 baseUrl           = 'https://genenetwork.fahamuai.com/api/tasks'
@@ -13,20 +14,8 @@ basedir           = os.path.abspath(os.path.dirname(__file__))
 
 apiClient         = Client(requests.Session(), api_key='')
 
-class DocIDs():
-    def __init__(self):
-        f = open(os.path.join(basedir, "document_ids.json") , "rb" )
-        result = json.load(f)
-        f.close()
-        self.doc_ids = result
 
-    def getInfo(self, doc_id):
-        if doc_id in self.doc_ids.keys():
-            return self.doc_ids[doc_id]
-        else:
-            return doc_id
-
-the_doc_ids = DocIDs()
+#the_doc_ids = DocIDs()
 
 def getAuth(api_config):
     print('Bearer token -> ' + api_config['Bearer Token September 2023'])
