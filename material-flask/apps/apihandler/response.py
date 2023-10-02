@@ -43,7 +43,7 @@ class DocIDs():
 
     def formatDocumentName(self, val):
        result = val.removesuffix('.pdf') 
-       result = val.removesuffix('.txt') 
+       result = result.removesuffix('.txt') 
        result = result.replace('_', ' ')
        return result
 
