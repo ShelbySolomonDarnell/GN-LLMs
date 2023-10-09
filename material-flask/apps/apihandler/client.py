@@ -73,7 +73,7 @@ class Client(Session):
         return result
 
     def getAuth(self, api_config):
-        return {"Authorization": "Bearer " + api_config['Bearer Token September 2023']}
+        return {"Authorization": "Bearer " + api_config['Bearer Token October 2023']}
 
     def ask(self, exUrl, *args, **kwargs):
         askUrl = self.baseUrl + exUrl

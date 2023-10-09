@@ -101,17 +101,21 @@ def register():
 
 @blueprint.route('/gnqa', methods=['POST', 'GET'])
 def gnqa():
-    queryForm = QueryGNQA(request.form)
-    if request.method == 'GET':
-        return render_template('home/gnqa.html')
-    if request.method == 'POST':
-        query = request.form['querygnqa']
-        answer, refs = getGNQA(query)
-        return render_template('home/gnqa.html',
-                query=query, answer=answer,
-                accordion_refs=refs, form=queryForm)
+    if not current_user.is_authenticated:
+        return redirect(url_for('authentication_blueprint.login'))
     else:
-        return render_template('home/gnqa.html')
+        print('Current user {0}'.format(current_user))
+        queryForm = QueryGNQA(request.form)
+        if request.method == 'GET':
+            return render_template('home/gnqa.html')
+        if request.method == 'POST':
+            query = request.form['querygnqa']
+            answer, refs = getGNQA(query)
+            return render_template('home/gnqa.html',
+                    query=query, answer=answer,
+                    accordion_refs=refs, form=queryForm)
+        else:
+            return render_template('home/gnqa.html')
 
 @blueprint.route('/logout')
 def logout():

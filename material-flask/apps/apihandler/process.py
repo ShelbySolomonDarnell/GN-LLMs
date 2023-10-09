@@ -18,8 +18,8 @@ apiClient         = Client(requests.Session(), api_key='')
 #the_doc_ids = DocIDs()
 
 def getAuth(api_config):
-    print('Bearer token -> ' + api_config['Bearer Token September 2023'])
-    return {"Authorization": "Bearer " + api_config['Bearer Token September 2023']}
+    print('Bearer token -> ' + api_config['Bearer Token October 2023'])
+    return {"Authorization": "Bearer " + api_config['Bearer Token October 2023']}
 
 
 def formatBibliographyInfo(bibInfo):
