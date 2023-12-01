@@ -23,11 +23,11 @@ source ${HOME}/genenetwork/configs/GN_LLM_CONF
 
 The configuration file should contain the following entries:
 
-`**`sh
+```sh
 export ASSETS_ROOT="/static/assets"
 export SECRET_KEY="our-little-secret"
 export SQLITE_URI="sqlite:///gnqa-db.sqlite3"
-`****
+```
 
 Ensure that each configuration parameter is appropriately set, either through the dedicated configuration file or by using the env command.
 
@@ -43,7 +43,7 @@ Finally, another required parameter that is important to set is the API Keys tha
 }
 ```
 
-**Note:** Should you be using GNU Guix, make sure that you are using the latest channels file provided in our CI [here](https://ci.genenetwork.org/channels.scm).  We recommend you use [guix profiles](https://issues.genenetwork.org/topics/guix-profiles).
+*Important:* You need to get the correct Bearer Token from Shelby to be able to have a functioning app.
 
 ### Configuration Variables
 
@@ -54,12 +54,14 @@ Finally, another required parameter that is important to set is the API Keys tha
 | SECRET_KEY  | Flask             | Used by flask to securely sign session cookies |
 | SQLITE_URI  | SQLite connection | Used to configure connections with sqlite      |
 
+**Note:** Should you be using GNU Guix, make sure that you are using the latest channels file provided in our CI [here](https://ci.genenetwork.org/channels.scm).  We recommend you use [guix profiles](https://issues.genenetwork.org/topics/guix-profiles).
+
 
 ## Installation
 
 The recommended way to install and run this application is by using [GNU Guix](https://guix.gnu.org/).
 
-The first step is to [install](https://guix.gnu.org/manual/en/html_node/System-Installation.html) [GNU Guix](https://guix.gnu.org/) as your system.  If you are already using some other Linux distribution, [install](https://guix.gnu.org/manual/en/html_node/Installation.html) GNU Guix as a package manager on your system.
+The first step is to [install](https://guix.gnu.org/manual/en/html_node/System-Installation.html) GNU Guix as your system.  If you are already using some other Linux distribution, [install](https://guix.gnu.org/manual/en/html_node/Installation.html) GNU Guix as a package manager on your system.
 
 Once you have GNU Guix installed on your computer, you can now start **material-flask** in one of three ways:
 
