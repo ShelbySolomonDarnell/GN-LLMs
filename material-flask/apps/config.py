@@ -55,13 +55,16 @@ class Config(object):
             print('> Fallback to SQLite ')
 
     if USE_SQLITE:
-        db_path = basedir + '/gnqa-db.sqlite3'
-        if os.path.isfile(db_path):
-            SQLALCHEMY_DATABASE_URI = 'sqlite:///' + db_path
-        else:
-            # This will create a file in <app> FOLDER
-            SQLALCHEMY_DATABASE_URI = 'sqlite:///' + \
-                os.path.join(basedir, 'gnqa-db.sqlite3')
+        SQLALCHEMY_DATABASE_URI = os.getenv('SQLITE_URI', None)
+        if SQLALCHEMY_DATABASE_URI:
+            db_path = basedir + '/gnqa-db.sqlite3'
+            if os.path.isfile(db_path):
+                SQLALCHEMY_DATABASE_URI = 'sqlite:///' + db_path
+            else:
+                # This will create a file in <app> FOLDER
+                SQLALCHEMY_DATABASE_URI = 'sqlite:///' + \
+                    os.path.join(basedir,
+                                 'gnqa-db.sqlite3')
 
 
 class ProductionConfig(Config):
