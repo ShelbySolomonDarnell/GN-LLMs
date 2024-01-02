@@ -7,7 +7,7 @@ import os
 from apps.apihandler.client import Client
 from apps.apihandler.response import DocIDs, the_doc_ids
 
-
+bearerToken       = 'Bearer Token December 2023'
 baseUrl           = 'https://genenetwork.fahamuai.com/api/tasks'
 answerUrl         = baseUrl + '/answers'
 basedir           = os.path.abspath(os.path.dirname(__file__))
@@ -18,8 +18,8 @@ apiClient         = Client(requests.Session(), api_key='')
 #the_doc_ids = DocIDs()
 
 def getAuth(api_config):
-    print('Bearer token -> ' + api_config['Bearer Token October 2023'])
-    return {"Authorization": "Bearer " + api_config['Bearer Token October 2023']}
+    print('Bearer token -> ' + api_config[bearerToken])
+    return {"Authorization": "Bearer " + api_config[bearerToken]}
 
 
 def formatBibliographyInfo(bibInfo):

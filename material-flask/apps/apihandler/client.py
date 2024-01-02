@@ -18,6 +18,7 @@ from requests.adapters import HTTPAdapter
 #from requests.compat import urljoin
 from requests.packages.urllib3.util.retry import Retry # type: ignore
 
+bearerToken = 'Bearer Token December 2023'
 basedir     = os.path.abspath(os.path.dirname(__file__))
 logger      = logging.getLogger(__name__)
 
@@ -73,7 +74,7 @@ class Client(Session):
         return result
 
     def getAuth(self, api_config):
-        return {"Authorization": "Bearer " + api_config['Bearer Token October 2023']}
+        return {"Authorization": "Bearer " + api_config[bearerToken]}
 
     def ask(self, exUrl, *args, **kwargs):
         askUrl = self.baseUrl + exUrl
@@ -101,7 +102,7 @@ class Client(Session):
 
     def custom_request(self, method, url, *args, **kwargs):
         max_retries = 5
-        retry_delay = 3
+        retry_delay = 4
 
         print ('[{0}] Request begin'.format(datetime.datetime.now()))
         response = super().request(method, url, *args, **kwargs)
