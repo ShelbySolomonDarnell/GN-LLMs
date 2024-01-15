@@ -14,13 +14,9 @@ basedir           = os.path.abspath(os.path.dirname(__file__))
 class DocIDs():
     def __init__(self):
         # open doc ids for GN refs
-        self.doc_ids = {} #self.loadFile("doc_ids.json")
-        # open doc ids for Diabetes references
-        #self.sugar_doc_ids = self.loadFile("sugar_doc_ids.json")
-        # format is not what I prefer, it needs to be rebuilt
-        #self.formatDocIDs(self.sugar_doc_ids)
+        self.doc_ids = {} 
         # open all doc ids file
-        self.all_doc_ids = self.loadFile("all_files.json")
+        self.all_doc_ids = self.loadFile("../static/assets/data/refs_id_name.json")
         self.formatDocIDs(self.all_doc_ids)
 
 
