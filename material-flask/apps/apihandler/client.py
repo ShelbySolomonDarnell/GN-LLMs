@@ -8,6 +8,7 @@ import datetime
 import json
 import logging
 import os
+import polling2
 import requests
 import time
 
@@ -18,7 +19,7 @@ from requests.adapters import HTTPAdapter
 #from requests.compat import urljoin
 from requests.packages.urllib3.util.retry import Retry # type: ignore
 
-bearerToken = 'Bearer Token December 2023'
+bearerToken = 'Bearer Token January 2024'
 basedir     = os.path.abspath(os.path.dirname(__file__))
 logger      = logging.getLogger(__name__)
 
@@ -86,6 +87,7 @@ class Client(Session):
 
     def getAnswer(self, taskid, *args, **kwargs):
         query = self.answerUrl + self.extendTaskID(taskid)
+        #res   = self.custom_polling_request(query, *args, **kwargs)
         res   = self.custom_request('GET', query, *args, **kwargs)
         if (res.status_code != 200):
             return self.negativeStatusMsg(res), 0
@@ -99,6 +101,23 @@ class Client(Session):
 
     def getTaskIDFromResult(self, res):
         return json.loads(res.text)
+    
+    def someData(res):
+        result = 0
+        if res['data'] != 'No data.':
+            result = 1
+        return result
+    
+    def custom_polling_request(self, url, *args, **kwargs):
+        res = polling2.poll(
+            lambda: requests.get(url, *args, **kwargs).status_code == 200,
+            step=1,
+            timeout=20,
+            #ignore_exceptions=(requests.exceptions.ConnectionError,),
+            log=logging.DEBUG,
+            log_error=logging.WARNING)
+            #poll_forever=True)
+        return res
 
     def custom_request(self, method, url, *args, **kwargs):
         max_retries = 5

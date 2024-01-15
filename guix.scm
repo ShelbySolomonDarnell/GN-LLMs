@@ -87,6 +87,7 @@
                           python-flask-restx
                           python-dotenv
                           python-six
+                          python-polling2
                           python-xxhash))
  (home-page "https://github.com/ShelbySolomonDarnell/GN-LLMs/material-flask/")
  (synopsis "")

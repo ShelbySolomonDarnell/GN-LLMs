@@ -46,3 +46,32 @@ def request_loader(request):
     username = request.form.get('username')
     user = Users.query.filter_by(username=username).first()
     return user if user else None
+
+class UserQueries(db.Model):
+
+    __tablename__ = 'UserQueries'
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), unique=True)
+    query    = db.Column(db.Text, unique=True)
+    answer   = db.Column(db.Text, unique=False)
+    refs     = db.relationship('QueryReference', backref='userqueries')
+    #email = db.Column(db.String(64), unique=True)
+    #password = db.Column(db.LargeBinary)
+
+
+    def __repr__(self):
+        return f'<Query and Response "{self.query}" --> "{self.answer}">'
+        return str(self.username)
+    
+class QueryReference(db.Model):
+    __tablename__ = 'QueryReference'
+
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.Text)
+    content = db.Column(db.Text)
+    answer_id = db.Column(db.Integer, db.ForeignKey('UserQueries.id'))
+
+    def __repr__(self):
+        return f'<Reference "{self.title}" --> "{self.content}">'
+        return str(self.username)
