@@ -116,6 +116,10 @@ def gnqa():
                     accordion_refs=refs, form=queryForm)
         else:
             return render_template('home/gnqa.html')
+        
+@blueprint.route('gnqatest', methods=['POST', 'GET'])
+def gnqatest():
+    return render_template('home/gnqatest.html')
 
 @blueprint.route('/logout')
 def logout():

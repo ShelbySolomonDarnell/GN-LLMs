@@ -101,7 +101,8 @@ class Client(Session):
 
     def getTaskIDFromResult(self, res):
         return json.loads(res.text)
-    
+
+    @staticmethod 
     def someData(res):
         result = 0
         if res['data'] != 'No data.':
@@ -110,7 +111,7 @@ class Client(Session):
     
     def custom_polling_request(self, url, *args, **kwargs):
         res = polling2.poll(
-            lambda: requests.get(url, *args, **kwargs).status_code == 200,
+            lambda: requests.get(url, *args, **kwargs).data != 'No data.',
             step=1,
             timeout=20,
             #ignore_exceptions=(requests.exceptions.ConnectionError,),
