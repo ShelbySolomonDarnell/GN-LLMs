@@ -1,0 +1,76 @@
+<script src="/static/assets/js/jquery.min.js"></script>
+
+<script src="/static/assets/boostrap/js/bootstrap.min.js"></script>
+
+<script src="/static/new/javascript/search_autocomplete.js"></script>
+
+<script src="/static/assets/jquery-cookie/jquery-cookie.js"></script>
+
+<script src="/static/assets/jquery-ui/jquery-ui.min.js"></script>
+
+<script src="/static/assets/jquery-colorbox/jquery.colorbox-min.js"></script>
+
+<script src="/static/assets/js/parsley.min.js"></script>
+
+<script>
+    //http://stackoverflow.com/questions/11521763/bootstrap-scrollspy-not-working
+    var $window = $(window)
+    $('.bs-docs-sidenav').affix({
+        offset: {
+            top: function() { return $window.width() <= 980 ? 290 : 210 },
+            bottom: 270
+        }
+    })
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+const urlParams = new  URLSearchParams(window.location.search)
+let term = urlParams.get("terms")
+
+    //should web scrap
+    var global_search_hint = [
+        "cytochrome",
+        "cytochrome AND P450",
+        "cytochrome NEAR P450",
+        "cytochrome -P450",
+        "cytochrome NOT P450",
+        "species:human",
+        "group:BXD",
+        "Hs:chr4:9930021 species:mouse",
+        "Hs:chr4:9130000..9980000 species:mouse",
+        "mean:5..7",
+        "mean:7..",
+        "Hs:chr4:9930021",
+        "Hs:chr4:9930021 species:mouse",
+        "Hs:chr4:9130000..9980000 species:mouse",
+        "bx*",
+        "*",
+    ]
+    autocomplete(document.getElementById("term"), global_search_hint);
+    $("#term").keyup(function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            $('#globalsearchform').attr('action', "/gsearch").submit();
+            if ($("#term").val().trim() != "") {
+                saveBeforeSubmit($("#term").val().trim())
+                $("#globalsearchform")[0].submit();
+            }
+
+        }
+    })
+
+});
+</script>
+
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    let timeToLoad = document.createElement("p");
+    timeToLoad.innerHTML = "It took your browser " + ((Date.now() - pageLoadStart) / 1000) + " second(s) to render this page";
+    document.querySelector("footer .row .col-xs-6").appendChild(timeToLoad);
+
+
+});
+</script>

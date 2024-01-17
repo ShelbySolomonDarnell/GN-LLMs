@@ -10,12 +10,66 @@
     <script type="text/javascript">
     var pageLoadStart = Date.now();
     </script>
-
+    <link rel="icon" type="image/png" sizes="64x64" href="/static/new/images/CITGLogo.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="64x64" href="/static/new/images/CITGLogo.png">
+    <link rel="stylesheet" TYPE="text/css" href="/static/assets/bootstrap/css/bootstrap.css"/>
+    <link REL="stylesheet" TYPE="text/css" href="/static/assets/new/css/bootstrap-custom.css" />
+    <link REL="stylesheet" TYPE="text/css" href="/static/assets/new/css/non-responsive.css" />
+    <link REL="stylesheet" TYPE="text/css" href="/static/assets/new/css/docs.css" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/new/css/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/new/css/parsley.css" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/new/css/broken_links.css" />
+    <link rel="stylesheet" href="/static/assets/new/css/autocomplete.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     {% block css %}
-    {% endblock %}
-    
+    {% endblock css %}
+    <style>
+        .form-rounded {
+            border-radius: 1rem;
+        }
+
+
+        .global_search_input{
+            padding:9px 8px;
+            text-decoration: none;
+            border: none;
+
+           border-radius: 5px;
+        }
+
+
+        .global_search_input:focus{
+    outline: none;
+}
+
+
+
+.btn-stc {
+    padding:9px 8px;
+
+    border-left:none;
+
+    border-radius:0 40px 40px 0;
+
+    cursor: pointer;
+
+    height: 40px;
+    width: 64px;
+    margin:0;
+    border:1px solid #d3d3d3;
+    background-color: white;
+
+    position: absolute;
+
+    top:0;
+    left: 100%;
+
+    right: 0;
+
+    border-left: none;
+}
+</style>
 </head>
 
 <body style="width: 100%">
@@ -34,6 +88,14 @@
                             <li><a href="/intro">Intro</a></li>
                             <li><a href="/submit_trait">Submit Trait</a></li>
                             <li><a href="http://genenetwork.org/webqtl/main.py?FormID=batSubmit">Batch Submission</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="/help" class="dropdow-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/tutorials">Webinars, Tutorials/Primers</a></li>
+                            <li><a href="http://gn1.genenetwork.org/faq.html">FAQ</a></li>
+                            <li><a href="/news">GN1 News</a></li>
                         </ul>
                     </li>
                     <li class="">
@@ -56,8 +118,6 @@
                             <li><a href="https://github.com/genenetwork/genenetwork2/blob/testing/doc/API_readme.md">REST API Documentation</a></li>
                         </ul>
                     </li>
-                    <li class="">
-
                 </ul>
             </div>
         </div>
@@ -72,8 +132,7 @@ required placeholder="Ask More Questions or Topics (E.g Genes) " value='' name="
         </form>
 
     </div>
-    {% include 'includes/footer_gn.html' %} 
-    
+
     <!--http://stackoverflow.com/questions/14045515/how-can-i-reuse-one-bootstrap-modal-div-->
     <!-- Modal -->
     <div id="utility" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -81,6 +140,14 @@ required placeholder="Ask More Questions or Topics (E.g Genes) " value='' name="
             <p>.</p>
         </div>
     </div>
+    {% block content %} {% endblock content %}
+
+    {% include 'includes/footer_gn.html' %} 
+
+    {% include 'includes/gn-scripts.html' %} 
+
+    <!-- Specific page JS goes HERE -->
+    {% block javascripts %}{% endblock javascripts%}
 </body>
 
 </html>

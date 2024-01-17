@@ -78,8 +78,25 @@
     font-weight: bold;
   }
 
+  #gnqna_search {
+    padding:15px  10px;
+    border-radius: 15px;
+    border:1px solid blue;
+  }
+
+  #gnqna_search{
+    font-weight: bold;
+    font-weight: 18px;
+  }
+
+  #main-search-controller{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .container{
-   / box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   }
 
   #loader {
